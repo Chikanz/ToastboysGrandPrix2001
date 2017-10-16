@@ -10,6 +10,23 @@ class AToastyGameMode : public AGameModeBase
 
 public:
 	AToastyGameMode();
+
+	virtual void BeginPlay() override;
+
+	UFUNCTION(BlueprintPure, Category = "Power")
+		float GetDecayRate() {return DecayRate;}
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Power")
+	float PowerDrainDelay;
+
+	FTimerHandle PowerDrainTimer;
+
+protected:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Power", Meta = (BlueprintProtected = "true"))
+	float DecayRate;
+
+private:
+	void DrainPowerOverTime();
 };
 
 

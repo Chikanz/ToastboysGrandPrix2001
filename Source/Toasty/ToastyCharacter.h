@@ -38,6 +38,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "Power")
 	void UpdatePower(float powerdelta);
 
+	UFUNCTION(BlueprintCallable, Category = "Race")
+	void WhenDestroyed();
+
 
 protected:
 
@@ -86,7 +89,10 @@ protected:
 	UPROPERTY(Replicated, EditAnywhere, BlueprintReadWrite, Category = "Power", Meta = (BlueprintProtected = "true"))
 	float InitialPower;
 
+	virtual void Tick(float dt);
 
+	UPROPERTY()
+	FVector CheckpointPos;
 
 public:
 	/** Returns CameraBoom subobject **/

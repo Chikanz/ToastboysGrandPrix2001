@@ -12,4 +12,33 @@ AToastyGameMode::AToastyGameMode()
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
+
+	DecayRate = 0.02f;
+
+	PowerDrainDelay = 0.25f;
+}
+
+void AToastyGameMode::BeginPlay()
+{
+	GetWorldTimerManager().SetTimer(PowerDrainTimer, this, &AToastyGameMode::DrainPowerOverTime, PowerDrainDelay, true);
+}
+
+void AToastyGameMode::DrainPowerOverTime()
+{
+	UWorld* worl = GetWorld();
+	check(worl);
+
+	for (FConstControllerIterator It = worl->GetControllerIterator(); It; ++It)
+	{
+		if (APlayerController* PlayerController = Cast<APlayerController>(*It))
+		{
+			if (AToastyCharacter* BatteryCharacter = Cast<AToastyCharacter>(PlayerController->GetPawn()))
+			{
+				if (BatteryCharacter->GetCurrentPower() > 0)
+				{
+					BatteryCharacter->UpdatePower(-PowerDrainDelay * DecayRate * (BatteryCharacter->GetInitialPower()));
+				}
+			}
+		}
+	}
 }

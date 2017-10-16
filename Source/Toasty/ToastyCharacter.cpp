@@ -47,8 +47,17 @@ AToastyCharacter::AToastyCharacter()
 	CollectionSphere->AttachTo(RootComponent);
 	CollectionSphere->SetSphereRadius(CollectionSphereRadius);
 
+	//Detect collision with floor
+	//HAHA NOPE
+	//GetCapsuleComponent()->OnComponentHit.AddDynamic(this, &AToastyCharacter::OnHit);
+
+	//OnDestroyed.AddDynamic(this, &AToastyCharacter::WhenDestroyed);
+
+
 	InitialPower = 2000;
 	CurrentPower = InitialPower;
+
+	PrimaryActorTick.bCanEverTick = true; //We won't be ticked by default  
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
@@ -92,7 +101,7 @@ void AToastyCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AToastyCharacter::OnResetVR);
 
 	//Pickyup
-	PlayerInputComponent->BindAction("CollectPickups", IE_Pressed, this, &AToastyCharacter::CollectPickups);
+	//PlayerInputComponent->BindAction("CollectPickups", IE_Pressed, this, &AToastyCharacter::CollectPickups);
 }
 
 void AToastyCharacter::CollectPickups()
@@ -121,9 +130,34 @@ void AToastyCharacter::ServerCollectPickups_Implementation()
 
 				TestPickup->PickedUpBy(this);
 				TestPickup->SetActive(false);
+
+				CheckpointPos = TestPickup->GetActorLocation();
 			}
 		}
 	}
+}
+
+void AToastyCharacter::Tick(float dt)
+{	
+	Super::Tick(dt);
+	CollectPickups();
+}
+
+void AToastyCharacter::WhenDestroyed()
+{
+	//Laters
+	Controller->UnPossess();
+
+	//Spawn another toasty boy
+	FRotator Rotation(0.0f, 0.0f, 0.0f);
+	FActorSpawnParameters SpawnInfo;
+	auto newMe = GetWorld()->SpawnActor<AToastyCharacter>(CheckpointPos, Rotation, SpawnInfo);
+
+	//Posess new me
+	newMe->Controller->Possess(newMe);
+
+	//Kill
+	Destroy();
 }
 
 

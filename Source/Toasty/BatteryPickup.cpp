@@ -10,7 +10,7 @@ ABatteryPickup::ABatteryPickup()
 	bReplicateMovement = true;
 
 	GetStaticMeshComponent()->SetMobility(EComponentMobility::Movable);
-	GetStaticMeshComponent()->SetSimulatePhysics(true);
+	//GetStaticMeshComponent()->SetSimulatePhysics(true);
 
 	BatteryPower = 200;
 }
@@ -28,6 +28,6 @@ void ABatteryPickup::PickedUpBy(APawn * Pawn)
 
 	if (Role == ROLE_Authority)
 	{
-		SetLifeSpan(2.0f); //Give leeway time to kill
+		SetLifeSpan(0.1f); //Give leeway time to kill
 	}
 }
