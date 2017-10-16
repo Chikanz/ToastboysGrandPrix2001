@@ -176,7 +176,6 @@
   <PropertyGroup Label="UserMacros" />
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|Win32'">
     <IncludePath />
@@ -194,7 +193,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'">
     <OutDir>D:\Program Files\Epic Games\UE_4.14\Engine\Intermediate\Build\Unused\</OutDir>
@@ -206,13 +204,11 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Game|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>
-    </LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -225,13 +221,11 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>
-    </LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -244,7 +238,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|Win32'">
     <IncludePath />
@@ -262,7 +255,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|Win32'">
     <OutDir>D:\Program Files\Epic Games\UE_4.14\Engine\Intermediate\Build\Unused\</OutDir>
@@ -274,7 +266,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|Win32'">
     <IncludePath />
@@ -292,7 +283,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'">
     <OutDir>D:\Program Files\Epic Games\UE_4.14\Engine\Intermediate\Build\Unused\</OutDir>
@@ -304,13 +294,11 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Game|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>
-    </LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -323,12 +311,11 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
     <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
     <ReferencePath />
-    <LibraryPath>C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\x64;C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\x86;C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\arm</LibraryPath>
+    <LibraryPath>C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\arm;C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\x86;C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\x64;$(LibraryPath)</LibraryPath>
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -342,7 +329,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|Win32'">
     <IncludePath />
@@ -360,7 +346,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|Win32'">
     <OutDir>D:\Program Files\Epic Games\UE_4.14\Engine\Intermediate\Build\Unused\</OutDir>
@@ -372,7 +357,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|Win32'">
     <IncludePath />
@@ -390,13 +374,11 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping_Game|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
+    <IncludePath />
     <ReferencePath />
-    <LibraryPath>
-    </LibraryPath>
+    <LibraryPath />
     <LibraryWPath />
     <SourcePath />
     <ExcludePath />
@@ -409,22 +391,6 @@
   </PropertyGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\FixyUnreal.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|x64'">
-    <Import Project="..\..\..\FixyUnreal.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|x64'">
-    <Import Project="..\..\..\FixyUnreal.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|x64'">
-    <Import Project="..\..\..\FixyUnreal.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|x64'">
-    <Import Project="..\..\..\FixyUnreal.props" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|x64'">
-    <Import Project="..\..\..\FixyUnreal.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|Win32'">
     <IncludePath />
@@ -470,31 +436,6 @@
     <NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
     <NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
     <NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Game|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
-    <LibraryPath>
-    </LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Shipping_Game|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
-    <LibraryPath>
-    </LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Editor|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
-    <LibraryPath>
-    </LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_Development_Editor|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
-    <LibraryPath>
-    </LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HTML5_DebugGame_Game|x64'">
-    <IncludePath>$(UniversalCRT_LibraryPath_arm);$(UniversalCRT_LibraryPath_x86);$(UniversalCRT_LibraryPath_x64);$(UniversalCRT_IncludePath)</IncludePath>
-    <LibraryPath>
-    </LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
