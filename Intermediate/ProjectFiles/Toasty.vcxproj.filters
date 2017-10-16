@@ -61,12 +61,18 @@
     <ClInclude Include="..\..\Source\Toasty\BatteryPickup.h">
       <Filter>Source\Toasty</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Toasty\ToastyHUD.h">
+      <Filter>Source\Toasty</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Toasty\Pickup.cpp">
       <Filter>Source\Toasty</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Toasty\BatteryPickup.cpp">
+      <Filter>Source\Toasty</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Toasty\ToastyHUD.cpp">
       <Filter>Source\Toasty</Filter>
     </ClCompile>
   </ItemGroup>

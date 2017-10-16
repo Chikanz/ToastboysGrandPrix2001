@@ -59,6 +59,9 @@ AToastyCharacter::AToastyCharacter()
 
 	PrimaryActorTick.bCanEverTick = true; //We won't be ticked by default  
 
+	//Set default checkpoint
+	CheckpointPos = GetActorLocation();
+
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
@@ -131,6 +134,7 @@ void AToastyCharacter::ServerCollectPickups_Implementation()
 				TestPickup->PickedUpBy(this);
 				TestPickup->SetActive(false);
 
+				//Set Checkpoint
 				CheckpointPos = TestPickup->GetActorLocation();
 			}
 		}
@@ -145,19 +149,22 @@ void AToastyCharacter::Tick(float dt)
 
 void AToastyCharacter::WhenDestroyed()
 {
-	//Laters
-	Controller->UnPossess();
-
-	//Spawn another toasty boy
 	FRotator Rotation(0.0f, 0.0f, 0.0f);
-	FActorSpawnParameters SpawnInfo;
-	auto newMe = GetWorld()->SpawnActor<AToastyCharacter>(CheckpointPos, Rotation, SpawnInfo);
+	TeleportTo(CheckpointPos, Rotation, false, false);
+	
+	////Laters
+	//Controller->UnPossess();
 
-	//Posess new me
-	newMe->Controller->Possess(newMe);
+	////Spawn another toasty boy
+	//FRotator Rotation(0.0f, 0.0f, 0.0f);
+	//FActorSpawnParameters SpawnInfo;
+	//auto newMe = GetWorld()->SpawnActor<AToastyCharacter>(CheckpointPos, Rotation, SpawnInfo);
 
-	//Kill
-	Destroy();
+	////Posess new me
+	//newMe->Controller->Possess(newMe);
+
+	////Kill
+	////Destroy();
 }
 
 

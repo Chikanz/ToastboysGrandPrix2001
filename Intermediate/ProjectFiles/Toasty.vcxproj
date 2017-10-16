@@ -407,6 +407,8 @@
     <NMakeOutput>..\..\Binaries\HTML5\Toasty-HTML5-Shipping.exe</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Toasty\ToastyHUD.cpp" />
+    <ClInclude Include="..\..\Source\Toasty\ToastyHUD.h" />
     <None Include="..\..\Toasty.uproject" />
     <None Include="..\..\Source\Toasty.Target.cs" />
     <None Include="..\..\Source\ToastyEditor.Target.cs" />

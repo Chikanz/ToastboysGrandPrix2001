@@ -28,6 +28,6 @@ void ABatteryPickup::PickedUpBy(APawn * Pawn)
 
 	if (Role == ROLE_Authority)
 	{
-		SetLifeSpan(0.1f); //Give leeway time to kill
+		//SetLifeSpan(0.1f); //Give leeway time to kill
 	}
 }
