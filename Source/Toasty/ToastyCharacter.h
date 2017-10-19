@@ -33,7 +33,15 @@ public:
 	float BaseLookUpRate;
 	
 	float GetInitialPower();	
+
+	UFUNCTION(BlueprintCallable, Category = "Power")
 	float GetCurrentPower();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Power")
+	float MaxPower;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Power")
+	int CheckPoints;
 
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = "Power")
 	void UpdatePower(float powerdelta);

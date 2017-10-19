@@ -13,6 +13,13 @@ AToastyGameMode::AToastyGameMode()
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 
+	//Set HUDy boy
+	static ConstructorHelpers::FClassFinder<AHUD> PlayerHUDClass(TEXT("/Game/Blueprints/BP_ToastyHUD"));
+	if (PlayerHUDClass.Class != NULL)
+	{
+		HUDClass = PlayerHUDClass.Class;
+	}
+
 	DecayRate = 0.02f;
 
 	PowerDrainDelay = 0.25f;

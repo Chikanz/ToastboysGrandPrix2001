@@ -131,11 +131,13 @@ void AToastyCharacter::ServerCollectPickups_Implementation()
 				if (ABatteryPickup* const b = Cast<ABatteryPickup>(TestPickup))
 					UpdatePower(b->GetPower());
 
+				//Activate 'pickup'
 				TestPickup->PickedUpBy(this);
 				TestPickup->SetActive(false);
 
 				//Set Checkpoint
 				CheckpointPos = TestPickup->GetActorLocation();
+				CheckPoints += 1;
 			}
 		}
 	}
@@ -150,6 +152,7 @@ void AToastyCharacter::Tick(float dt)
 void AToastyCharacter::WhenDestroyed()
 {
 	FRotator Rotation(0.0f, 0.0f, 0.0f);
+	UpdatePower(200);
 	TeleportTo(CheckpointPos, Rotation, false, false);
 	
 	////Laters
@@ -183,6 +186,7 @@ void AToastyCharacter::UpdatePower(float powerdelta)
 	if (Role == ROLE_Authority)
 	{
 		CurrentPower += powerdelta;
+		if (CurrentPower > MaxPower) CurrentPower = MaxPower;
 	}
 }
 
