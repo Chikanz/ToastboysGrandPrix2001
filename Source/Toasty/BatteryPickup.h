@@ -23,6 +23,8 @@ public:
 	virtual void PickedUpBy(APawn* Pawn);
 
 	float GetPower() { return BatteryPower; }
+
+	bool isCheckpoint = true;
 	
 protected:
 

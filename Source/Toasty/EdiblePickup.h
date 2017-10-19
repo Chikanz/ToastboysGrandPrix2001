@@ -12,9 +12,12 @@ UCLASS()
 class TOASTY_API AEdiblePickup : public ABatteryPickup
 {
 	GENERATED_BODY()
+
+
 	
 public:
-	virtual void PickedUpBy(APawn* Pawn) override;
+	void PickedUpBy(APawn* Pawn) override;
+	AEdiblePickup();
 	
 	
 };

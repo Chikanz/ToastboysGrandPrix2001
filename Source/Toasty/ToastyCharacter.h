@@ -40,6 +40,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Power")
 	float MaxPower;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Power")
+	float BaseSpeed = 300.0f;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Power")
 	int CheckPoints;
 
@@ -48,6 +51,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Race")
 	void WhenDestroyed();
+
+	UFUNCTION(BlueprintCallable, Category = "Race")
+		void Flush();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Power")
+		bool isAlive = true;
 
 
 protected:
@@ -101,6 +110,8 @@ protected:
 
 	UPROPERTY()
 	FVector CheckpointPos;
+
+	
 
 public:
 	/** Returns CameraBoom subobject **/

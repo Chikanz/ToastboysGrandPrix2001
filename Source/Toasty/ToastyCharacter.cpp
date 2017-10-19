@@ -128,16 +128,19 @@ void AToastyCharacter::ServerCollectPickups_Implementation()
 			APickup* const TestPickup = Cast<APickup>(Collected[i]);
 			if (TestPickup != NULL && !TestPickup->IsPendingKill() && TestPickup->IsActive())
 			{
-				if (ABatteryPickup* const b = Cast<ABatteryPickup>(TestPickup))
-					UpdatePower(b->GetPower());
+				ABatteryPickup* const b = Cast<ABatteryPickup>(TestPickup);
+				if (b) UpdatePower(b->GetPower());
 
 				//Activate 'pickup'
 				TestPickup->PickedUpBy(this);
 				TestPickup->SetActive(false);
 
 				//Set Checkpoint
-				CheckpointPos = TestPickup->GetActorLocation();
-				CheckPoints += 1;
+				if (b->isCheckpoint)
+				{
+					CheckpointPos = TestPickup->GetActorLocation();
+					CheckPoints += 1;
+				}
 			}
 		}
 	}
@@ -146,13 +149,19 @@ void AToastyCharacter::ServerCollectPickups_Implementation()
 void AToastyCharacter::Tick(float dt)
 {	
 	Super::Tick(dt);
+
+	if (!isAlive) return;
+
 	CollectPickups();
+	float  multi = (CurrentPower / (MaxPower / 2));
+	if (multi < 1) multi = 1;
+	GetCharacterMovement()->MaxWalkSpeed = BaseSpeed * multi;
 }
 
 void AToastyCharacter::WhenDestroyed()
 {
 	FRotator Rotation(0.0f, 0.0f, 0.0f);
-	UpdatePower(200);
+	//UpdatePower(200);
 	TeleportTo(CheckpointPos, Rotation, false, false);
 	
 	////Laters
@@ -168,6 +177,12 @@ void AToastyCharacter::WhenDestroyed()
 
 	////Kill
 	////Destroy();
+}
+
+void AToastyCharacter::Flush()
+{
+	isAlive = false;
+	GetCharacterMovement()->MaxWalkSpeed = 0;	
 }
 
 

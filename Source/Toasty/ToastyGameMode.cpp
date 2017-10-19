@@ -20,7 +20,7 @@ AToastyGameMode::AToastyGameMode()
 		HUDClass = PlayerHUDClass.Class;
 	}
 
-	DecayRate = 0.02f;
+	DecayRate = 0.01f;
 
 	PowerDrainDelay = 0.25f;
 }
