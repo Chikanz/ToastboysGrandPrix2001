@@ -3,11 +3,15 @@ Networked third person racing platformer game using ue4
 
 Go through checkpoints and eat tuna to gain momentum
 
-
-Don't touch the floor
-
-
 First one to be flushed down the toilet wins!
+
+## notes
+
+Lighting builds weirdly sometimes, if objects are dark move them slightly to undo built lighting.
+
+Also crashes the editor after exiting for some reason ¯\\\_(ツ)\_/¯
+
+## Models
 
 All models used from Blocks by Google, licenced under CC-BY.
 https://support.google.com/blocks/answer/7418679?hl=en&ref_topic=7424093
