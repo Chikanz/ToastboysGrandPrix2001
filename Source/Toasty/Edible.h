@@ -12,8 +12,6 @@ UCLASS()
 class TOASTY_API AEdible : public APickup
 {
 	GENERATED_BODY()
-	
-	
-	
-	
+
+
 };

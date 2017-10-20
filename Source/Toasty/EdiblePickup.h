@@ -19,5 +19,14 @@ public:
 	void PickedUpBy(APawn* Pawn) override;
 	AEdiblePickup();
 	
-	
+	virtual void BeginPlay() override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AAAA")
+	class UParticleSystem* particles;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AAAA")
+	FLinearColor ParticleCol; 
+
+private:
+	UParticleSystemComponent* SpawnedParticleSystem;
 };
